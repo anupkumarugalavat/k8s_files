@@ -1,4 +1,4 @@
-#manifest for multiple pods/containers
+#manifest for adding variables to containers
 
 kind: Pod
 apiVersion: v1
@@ -9,8 +9,14 @@ spec:
     - name: c00
       image: ubuntu
       command: ["bin/bash", "-c", "while true; do echo hello everyone; sleep 5 ; done"]
+      env:
+        - name: MYNAME #(key name for environment variableto be used inside the container)
+          value: demo #(value)
 
 
     - name: c01
       image: ubuntu
       command: ["bin/bash", "-c", "while true; do echo hello everyone; sleep 5 ; done"]
+      env:
+        - name: MYNAME #(key name for environment variableto be used inside the container)
+          value: demo #(value)
