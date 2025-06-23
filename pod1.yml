@@ -1,0 +1,10 @@
+ # This loop prints "hello everyone" every 5 seconds indefinitely
+kind: Pod
+apiVersion: v1
+metadata:
+  name: testpod
+spec:
+  containers:
+    - name: c00
+  image: ubuntu
+command: ["bin/bash", "-c", "while true; do echo hello everyone; sleep 5 ; done"]
